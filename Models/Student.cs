@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using WebAppCustomDataAnnotation.CustomAttributeValidation;
-using WebAppCustomDataAnnotation.CustomAttributeValidation;
+
 
 namespace WebAppCustomDataAnnotation.Models
 {
