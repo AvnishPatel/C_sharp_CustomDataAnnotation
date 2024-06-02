@@ -9,13 +9,13 @@ namespace WebAppCustomDataAnnotation.ArrtibuteValidation
 
     public class UniqueEmailAttribute : ValidationAttribute
     {
-
         protected override ValidationResult IsValid(object _value, ValidationContext validationContext)
         {
 
             if (_value != null && _value.ToString() == "name@company.com")
             {
-                return new ValidationResult(ErrorMessage = "Email address already exist");
+                var errorMessage = FormatErrorMessage(validationContext.DisplayName);
+                return new ValidationResult(errorMessage);                           
             }
 
             return ValidationResult.Success;

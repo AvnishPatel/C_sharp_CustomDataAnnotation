@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using WebAppCustomDataAnnotation.ArrtibuteValidation;
+using WebAppCustomDataAnnotation.AttributeValidation;
 
 namespace WebAppCustomDataAnnotation.Models
 {
@@ -8,10 +9,12 @@ namespace WebAppCustomDataAnnotation.Models
         public int Id { get; set; }
         
         [Required]
+        [UniqueName(ErrorMessage = "{0} is already exist.")]
         public string Name { get; set; }
         
+        
         [Required(ErrorMessage = "Email address is required.")]
-        [UniqueEmail]
+        [UniqueEmail(ErrorMessage ="Email address must be unique.")]
         public string Email { get; set; }
     }
 }
