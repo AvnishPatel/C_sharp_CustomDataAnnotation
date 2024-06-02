@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WebAppCustomDataAnnotation.AttributeValidation
+namespace WebAppCustomDataAnnotation.CustomAttributeValidation
 {
     public class UniqueNameAttribute: ValidationAttribute
     {
